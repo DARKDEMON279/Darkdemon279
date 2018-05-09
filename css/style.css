@@ -1,8 +1,16 @@
 *{
 	padding: 0;
 	margin: 0;
+	font-family: 'Share', cursive;
+	color: white;
 }
 
+/*Clases Generales*/
 body{
-	background-color: blue;
+	background-color: #1c1c1c;
 }
+
+/*Clases de texto*/
+h1,h2,h3,h4{ font-family: 'Audiowide', cursive;
+ font-size: 50px; }
+p{ font-size: 30px; }
