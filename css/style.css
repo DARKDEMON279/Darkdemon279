@@ -3,14 +3,180 @@
 	margin: 0;
 	font-family: 'Share', cursive;
 	color: white;
+	overflow-x: hidden;
 }
 
+/*Carga de Fuentes Icomoon*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?c9d73s');
+  src:  url('../fonts/icomoon.eot?c9d73s#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?c9d73s') format('truetype'),
+    url('../fonts/icomoon.woff?c9d73s') format('woff'),
+    url('../fonts/icomoon.svg?c9d73s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+
 /*Clases Generales*/
-body{
-	background-color: #1c1c1c;
+body{ background-color: #1c1c1c; }
+
+.center{
+	text-align: center;
+	justify-content: center;
 }
 
 /*Clases de texto*/
-h1,h2,h3,h4{ font-family: 'Audiowide', cursive;
- font-size: 50px; }
+h1,h2,h3,h4{ 
+	font-family: 'Audiowide', cursive;
+    font-size: 50px; 
+}
 p{ font-size: 30px; }
+
+/*Menu*/
+header{
+	width: 100%;
+	height: 44px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	overflow: hidden;
+}
+
+header span{
+	font-size: 40px;
+    position: fixed;
+    display: none;
+    z-index: 2;
+    margin: 10px;
+    left: 80%
+}
+
+header img{
+	margin: 9px;
+}
+
+nav{
+    padding: 5px;
+    float: right;
+    z-index: 2;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 6px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Audiowide', cursive;
+}
+
+/*Seccion 1 - Encabezado*/
+.header{
+	width: 100%;
+	height: 600px;
+	background: red;
+}
+
+
+/*Seccion 2 - Contenido*/
+.seccion_2{
+	width: 100%;
+}
+
+/*Responsive Design 320px, 576px, 768px, 920px, 1200px*/
+@media screen and (max-width: 1200px){
+
+}
+@media screen and (max-width: 920px){
+
+}
+@media screen and (max-width: 768px){
+ header span{
+    	display: inline-block;
+    }
+    header{
+    	background: transparent;
+    }
+    nav{
+    	width: 100%;
+    	height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: black;
+        z-index: 1;
+        padding: 0;
+        transition: .7s;
+    }
+    nav ul{
+    	margin-top: 200px;
+    }
+    nav ul li{
+    	display: flex;
+    	justify-content: center;
+    }
+    nav ul li a{
+    	background: red;
+    	padding: 10px;
+    }
+    .active{
+    	left: 0;
+    	transition: .3s;
+    }
+}
+@media screen and (max-width: 576px){
+   
+}
+@media screen and (max-width: 320px){
+
+}
